@@ -1,14 +1,68 @@
-<form name="login">
-        <h1>&nbsp;&nbsp; Username:</h1>
-        <input style="WIDTH: 205px; HEIGHT: 32px" id="ricerca" name="username" size="27">
-        </form>
-    </div>
-    <div align="center">
-      <form name="login">
-        <h1>Inserisci password:</h1>
-         <input style="WIDTH: 205px; HEIGHT: 32px" id="ricerca" name="pwd" size="27" type="password"><input style="WIDTH: 150px; HEIGHT: 31px" onClick="window.location='access1D_'+this.form.pwd.value+'.html'" value=" AUTENTICATI! " size="70" type="button">
-      </form>
-      <br><br><br>Scrivi la pass e premi "Autenticati!" 
-    </div>
-  </body>
-</html>
+<!DOCTYPE html>
+<html>
+<head>
+
+ <!DOCTYPE html>
+<html>
+<head>
+
+  <head>
+  <body>
+    <h1 id="titolo"> ESTRAZIONE A SORTE </h1>
+    <p> puoi interrogare solo se inserisci la Password</p>
+<p class ="dati"> Docente : <input type="text" id="cognome" name="nome" /> </p>
+<p class ="dati"> Password : <input type="Password" id="Password" maxlength="4" size="18" value="" name="Password" /> </p>
+
+
+   <input type="button" id="button" value="ESTRAI!!!" onClick="scegli()"/>
+  
+
+   <br><br><label>L'INTERROGATO DI OGGI E' 
+   <input id="nome" type="text">
+   </label>
+   
+   
+   
+   <div>
+   <ul>
+   <li>IDAN</li>
+   <li>ALEX</li>
+   <li>LEAM</li>
+   <li>SACHA</li>
+   <li>MICHELLE</li>
+   <li>ISAAC</li>
+   <li>JACOPO</li>
+   <li>GADI</li>
+   <li>NOEMI</li>
+   <li>DAVID</li>
+   <li>GABRIEL</li>
+   <li>LEO</li>
+   <li>NICOLO'</li>
+   <li>ROMINA</li>
+   <li>SIMON</li> 
+   </ul>
+   </div>
+  
+   
+  <script>
+    var titolo = document.getElementById("titolo");
+    console.log(titolo);
+    titolo.style.backgroundColor = "orange";
+    titolo.style.textAlign = "center";
+    
+    var lista = ["IDAN","ALEX","LEAM","SACHA","MICHELLE","ISAAC","JACOPO","GADI","NOEMI","DAVID","GABRIEL","LEO","NICOLO'","ROMINA","SIMON"];
+    
+    function scegli() {
+     var x = Math.floor(Math.random() * lista.length); 
+     document.getElementById("nome").value += "," + lista[x]
+     var interrogato = document.getElementsByTagName("li");
+     interrogato[x].style.backgroundColor = "yellow";
+     }
+    
+   
+</script>
+    
+   
+    
+</body>
+</html>    
